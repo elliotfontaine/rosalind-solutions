@@ -6,11 +6,6 @@ Problem 4 : Rabbits and Recurrence Relations
 
 import sys
 
-file = sys.argv[1]
-with open(file, encoding="utf-8") as f:
-    parameters = f.read().strip().split()
-    parameters = list(map(int, parameters))
-
 
 def fib(n: int, k: int) -> int:
     """Return the number of rabbit pairs after n months with k offspring per pair."""
@@ -20,4 +15,8 @@ def fib(n: int, k: int) -> int:
         return 1
 
 
+file = sys.argv[1]
+with open(file, encoding="utf-8") as f:
+    parameters = f.read().strip().split()
+    parameters = list(map(int, parameters))
 print(fib(*parameters))
